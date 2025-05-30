@@ -1,0 +1,11 @@
+services:
+  app:
+    image: test-github-action:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "tail -f /dev/null"
+    environment:
+      LANG: "C.UTF-8"
+      PYTHONUNBUFFERED: 1
+      QT_QPA_PLATFORM: "offscreen"
